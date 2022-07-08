@@ -45,7 +45,6 @@ body {
   /* background: var(--clr-grey-10); */
   color: var(--clr-grey-1);
   line-height: 1.5;
-  font-size: 1.2rem;
 }
 
 h1,
@@ -62,6 +61,7 @@ h4 {
 
   .title {
     text-align: center;
+    margin-top: 1rem;
     margin-bottom: 4rem;
   }
   .underline {
