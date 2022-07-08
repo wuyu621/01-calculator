@@ -17,11 +17,11 @@ function App() {
     originalPrice * discount1 * discount2 * (1 + tax / 100) * exchangeRate +
     usShippingFee * exchangeRate;
 
-  const profit = (profitRate * cost) / (100 - profitRate);
+  const shippingCost = shippingWeight * shippingCostUnit * exchangeRate;
 
-  const shippingFee = shippingWeight * shippingCostUnit * exchangeRate;
+  const profit = (profitRate * (cost + shippingCost)) / (100 - profitRate);
 
-  const salePrice = cost + shippingFee + profit;
+  const salePrice = cost + shippingCost + profit;
 
   return (
     <main>
@@ -39,6 +39,7 @@ function App() {
                   type="number"
                   className="form-control"
                   name={originalPrice}
+                  min="0"
                   onChange={(e) => {
                     setOriginalPrice(e.target.value);
                   }}
@@ -53,6 +54,7 @@ function App() {
                   className="form-control"
                   name={discount1}
                   value={discount1}
+                  min="0" max="1"
                   onChange={(e) => {
                     setDiscount1(e.target.value);
                   }}
@@ -67,6 +69,7 @@ function App() {
                   className="form-control"
                   name={discount2}
                   value={discount2}
+                  min="0" max="1"
                   onChange={(e) => {
                     setDiscount2(e.target.value);
                   }}
@@ -156,7 +159,7 @@ function App() {
           </div>
           <div className="col-5">
             <h4 className="text-primary">货物成本：￥{cost.toFixed(2)}</h4>
-            <h4 className="text-primary">运费：￥{shippingFee.toFixed(2)}</h4>
+            <h4 className="text-primary">运费：￥{shippingCost.toFixed(2)}</h4>
             <h4 className="text-danger">卖价：￥{salePrice.toFixed(2)}</h4>
             <hr />
             <h4 className="text-success">你赚了：￥{profit.toFixed(2)}</h4>
