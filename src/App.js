@@ -32,8 +32,8 @@ function App() {
         <div className="row">
           <div className="col-7">
             <div className="form-group row">
-              <label className="col-5 col-form-label">原价$</label>
-              <div className="col-7">
+              <label className="col-6 col-form-label">原价$</label>
+              <div className="col-6">
                 <input
                   type="number"
                   className="form-control"
@@ -45,8 +45,8 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">折扣1%</label>
-              <div className="col-7">
+              <label className="col-6 col-form-label">折扣1%</label>
+              <div className="col-6">
                 <input
                   type="number"
                   className="form-control"
@@ -59,8 +59,8 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">折扣2%</label>
-              <div className="col-7">
+              <label className="col-6 col-form-label">折扣2%</label>
+              <div className="col-6">
                 <input
                   type="number"
                   className="form-control"
@@ -73,8 +73,8 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">税率%</label>
-              <div className="col-7">
+              <label className="col-6 col-form-label">税率%</label>
+              <div className="col-6">
                 <input
                   type="number"
                   className="form-control"
@@ -86,8 +86,8 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">US运费$</label>
-              <div className="col-7">
+              <label className="col-6 col-form-label">US运费$</label>
+              <div className="col-6">
                 <input
                   type="number"
                   className="form-control"
@@ -99,8 +99,8 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">运费重量lb</label>
-              <div className="col-7">
+              <label className="col-6 col-form-label">运费重量lb</label>
+              <div className="col-6">
                 <input
                   type="number"
                   className="form-control"
@@ -112,8 +112,8 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">运费单价$</label>
-              <div className="col-7">
+              <label className="col-6 col-form-label">运费单价$</label>
+              <div className="col-6">
                 <input
                   type="number"
                   className="form-control"
@@ -125,8 +125,8 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">汇率</label>
-              <div className="col-7">
+              <label className="col-6 col-form-label">汇率</label>
+              <div className="col-6">
                 <input
                   type="number"
                   className="form-control"
@@ -139,8 +139,8 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">利润率%</label>
-              <div className="col-7">
+              <label className="col-6 col-form-label">利润率%</label>
+              <div className="col-6">
                 <input
                   type="number"
                   className="form-control"
