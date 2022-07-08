@@ -45,7 +45,7 @@ body {
   /* background: var(--clr-grey-10); */
   color: var(--clr-grey-1);
   line-height: 1.5;
-  font-size: 0.875rem;
+  font-size: 1.2rem;
 }
 
 h1,
@@ -59,22 +59,7 @@ h4 {
 }
 
 /* section */
-.section {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: var(--max-width);
-  }
-  
-  @media screen and (min-width: 992px) {
-    .section {
-      width: 95vw;
-    }
-  }
-  main {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-  }
+
   .title {
     text-align: center;
     margin-bottom: 4rem;
@@ -85,8 +70,4 @@ h4 {
     background: var(--clr-primary-5);
     margin-left: auto;
     margin-right: auto;
-  }
-  .container {
-    width: 80vw;
-    max-width: var(--fixed-width);
   }
