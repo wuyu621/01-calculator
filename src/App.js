@@ -32,7 +32,7 @@ function App() {
         <div className="row">
           <div className="col-7">
             <div className="form-group row">
-              <label className="col-5 col-form-label">美金原价</label>
+              <label className="col-5 col-form-label">原价$</label>
               <div className="col-7">
                 <input
                   type="number"
@@ -45,7 +45,7 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">折扣1 %</label>
+              <label className="col-5 col-form-label">折扣1%</label>
               <div className="col-7">
                 <input
                   type="number"
@@ -59,7 +59,7 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">折扣2 %</label>
+              <label className="col-5 col-form-label">折扣2%</label>
               <div className="col-7">
                 <input
                   type="number"
@@ -73,7 +73,7 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">税率 %</label>
+              <label className="col-5 col-form-label">税率%</label>
               <div className="col-7">
                 <input
                   type="number"
@@ -99,7 +99,7 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">运费重量 lb</label>
+              <label className="col-5 col-form-label">运费重量lb</label>
               <div className="col-7">
                 <input
                   type="number"
@@ -112,7 +112,7 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">运费单价 $</label>
+              <label className="col-5 col-form-label">运费单价$</label>
               <div className="col-7">
                 <input
                   type="number"
@@ -139,7 +139,7 @@ function App() {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-5 col-form-label">利润率 %</label>
+              <label className="col-5 col-form-label">利润率%</label>
               <div className="col-7">
                 <input
                   type="number"
