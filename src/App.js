@@ -26,7 +26,7 @@ function App() {
     <main>
       <section className="container">
         <div className="title">
-          <h1>my calculator</h1>
+          <h1>daigou calculator</h1>
           <div className="underline"></div>
         </div>
         <div className="row">
