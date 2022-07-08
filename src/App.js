@@ -14,13 +14,14 @@ function App() {
   const [profitRate, setProfitRate] = useState(20);
 
   const cost =
-    (originalPrice * (1 + tax / 100) * discount1 * discount2 + usShippingFee) *
-    exchangeRate;
+    originalPrice * discount1 * discount2 * (1 + tax / 100) * exchangeRate +
+    usShippingFee * exchangeRate;
 
   const profit = (profitRate * cost) / (100 - profitRate);
 
-  const salePrice =
-    cost + shippingWeight * shippingCostUnit * exchangeRate + profit;
+  const shippingFee = shippingWeight * shippingCostUnit * exchangeRate;
+
+  const salePrice = cost + shippingFee + profit;
 
   return (
     <main>
@@ -31,8 +32,8 @@ function App() {
         </div>
         <div className="row">
           <div className="col-7">
-            <div className="form-group row">
-              <label className="col-6 col-form-label">原价$</label>
+            <div className="mb-3 row">
+              <label className="col-6 col-form-label">原价 $</label>
               <div className="col-6">
                 <input
                   type="number"
@@ -44,8 +45,8 @@ function App() {
                 />
               </div>
             </div>
-            <div className="form-group row">
-              <label className="col-6 col-form-label">折扣1%</label>
+            <div className="mb-3 row">
+              <label className="col-6 col-form-label">折扣1 %</label>
               <div className="col-6">
                 <input
                   type="number"
@@ -58,8 +59,8 @@ function App() {
                 />
               </div>
             </div>
-            <div className="form-group row">
-              <label className="col-6 col-form-label">折扣2%</label>
+            <div className="mb-3 row">
+              <label className="col-6 col-form-label">折扣2 %</label>
               <div className="col-6">
                 <input
                   type="number"
@@ -72,8 +73,8 @@ function App() {
                 />
               </div>
             </div>
-            <div className="form-group row">
-              <label className="col-6 col-form-label">税率%</label>
+            <div className="mb-3 row">
+              <label className="col-6 col-form-label">税率 %</label>
               <div className="col-6">
                 <input
                   type="number"
@@ -85,8 +86,8 @@ function App() {
                 />
               </div>
             </div>
-            <div className="form-group row">
-              <label className="col-6 col-form-label">US运费$</label>
+            <div className="mb-3 row">
+              <label className="col-6 col-form-label">US运费 $</label>
               <div className="col-6">
                 <input
                   type="number"
@@ -98,8 +99,8 @@ function App() {
                 />
               </div>
             </div>
-            <div className="form-group row">
-              <label className="col-6 col-form-label">运费重量lb</label>
+            <div className="mb-3 row">
+              <label className="col-6 col-form-label">运费重量 lb</label>
               <div className="col-6">
                 <input
                   type="number"
@@ -111,8 +112,8 @@ function App() {
                 />
               </div>
             </div>
-            <div className="form-group row">
-              <label className="col-6 col-form-label">运费单价$</label>
+            <div className="mb-3 row">
+              <label className="col-6 col-form-label">运费单价 $</label>
               <div className="col-6">
                 <input
                   type="number"
@@ -124,7 +125,7 @@ function App() {
                 />
               </div>
             </div>
-            <div className="form-group row">
+            <div className="mb-3 row">
               <label className="col-6 col-form-label">汇率</label>
               <div className="col-6">
                 <input
@@ -138,8 +139,8 @@ function App() {
                 />
               </div>
             </div>
-            <div className="form-group row">
-              <label className="col-6 col-form-label">利润率%</label>
+            <div className="mb-3 row">
+              <label className="col-6 col-form-label">利润率 %</label>
               <div className="col-6">
                 <input
                   type="number"
@@ -154,7 +155,8 @@ function App() {
             </div>
           </div>
           <div className="col-5">
-            <h4 className="text-primary">成本：￥{cost.toFixed(2)}</h4>
+            <h4 className="text-primary">货物成本：￥{cost.toFixed(2)}</h4>
+            <h4 className="text-primary">运费：￥{shippingFee.toFixed(2)}</h4>
             <h4 className="text-danger">卖价：￥{salePrice.toFixed(2)}</h4>
             <hr />
             <h4 className="text-success">你赚了：￥{profit.toFixed(2)}</h4>
